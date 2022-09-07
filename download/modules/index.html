@@ -1,4 +1,10 @@
-{% assign doclist = site.pages | sort: 'url'  %}
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+      <title>Sower Applications</title>
+  </head>
+  <body style="                         margin: 0px;">
+      {% assign doclist = site.pages | sort: 'url'  %}
     <ul>
        {% for doc in doclist %}
             {% if doc.name contains '.bz2' or doc.name contains '.html' %}
@@ -6,3 +12,5 @@
             {% endif %}
         {% endfor %}
     </ul>
+  </body>
+</html>
